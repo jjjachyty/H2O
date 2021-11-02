@@ -464,7 +464,7 @@ export default {
 
         .reward {
           display: flex;
-          justify-content: start;
+          justify-content: flex-start;
           flex-direction: row;
           color: black;
         }

@@ -281,6 +281,7 @@ export default {
                 state.depositTokenList[index].pledgeYear = {...info.pledgeYear}
                 state.depositTokenList[index].balanceLoading = false
             }
+            console.log("setDepositBalance>>>>>>>>>>>",state.depositTokenList)
         },
         setPledgeBalance(state , info  ){
             if(!info.kind || !state.pledgeList[info.kind]) return 
@@ -349,7 +350,7 @@ export default {
             }
         },
         setAllTokenName(state , {name , name_h , t} ){
-            console.log('t',t);
+            console.log('setAllTokenName>>>>>>>>>>>>>>>>>>>>',t);
             let index = state.depositTokenList.findIndex(item=>item.address === t)
             if(index !== -1){
                 state.depositTokenList[index].name = name
@@ -501,10 +502,12 @@ export default {
 
         
         async DepositTokenList({commit ,state}){
+
             if(state.depositListLoading) return 
             commit("setDepositListLoading" , true)
             let list  = await getDepositTokenList()
             if(Array.isArray(list) && list.length) {
+                console.log("getDepositTokenList>>>>>>>>>>>>>>>>>",list)
                 commit('setTokenList' , list)
                 list.forEach(item=>{
                     getHTokenAddress(item).then(async  res=>{
