@@ -1,0 +1,24 @@
+export default{
+    fixed:[//活期
+        {
+            token:'0x4d97ea5A9712DF3E06F648bea59678dFae593aCA',
+            originToken:'0x0000000000000000000000000000000000000000',
+            pId:'2'
+        },
+        {
+            token:'0x2DE53B47b3E9D0bB70059c51397E1fbe828Fb385',
+            originToken:'0x34Cb9b09F453D5A87720dD31867BBE56A75E30a5',
+            pId:'7'
+        }
+    ],
+    demand:[
+        {
+            token:'0x4d97ea5A9712DF3E06F648bea59678dFae593aCA',
+            originToken:'0x0000000000000000000000000000000000000000',
+            D90:'3',
+            D180:'4',
+            D365:'5'
+        }
+    ],
+    IROPid:'6'
+}

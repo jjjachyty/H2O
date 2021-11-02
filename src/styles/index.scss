@@ -1,0 +1,69 @@
+@import './color.scss';
+@import './sidebar.scss';
+@import './common.scss';
+
+
+
+body {
+    // background-color: $color-body-bg;
+    @include bodyBgc($color-bg-body-light , $color-font-body-light);
+    // color: #333333;
+}
+a {
+    text-decoration: none;
+}
+
+// .fade-transform-leave-active{
+//   transition: none;
+// }
+// .fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .5s;
+  // transition-delay: .2s;
+}
+
+.fade-transform-leave-active{
+  // transition: all .1s;
+}
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+[v-cloak] {
+  display: none !important;
+}
+.el-tooltip__popper {
+  .el-loading-mask {
+    background-color: rgba(0, 0, 0 , 0.2);
+  }
+  .tooltipsItem {
+    display: flex;
+    line-height: 24px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+    
+    .left {
+        img {
+            width: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+    }
+    .right{
+      .amount {
+        margin-right: 10px;
+      }
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
